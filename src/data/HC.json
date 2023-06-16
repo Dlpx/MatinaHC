@@ -1,0 +1,50 @@
+[
+	{
+		"id": 1,
+		"dni": 5433622,
+		"primerNombre": "Nicolardo",
+		"otrosNombre": "Federico",
+		"padreApellido": "Ramones",
+		"madreApellido": "Villa",
+		"nacimiento": "1994-01-18",
+		"fechaRegistro": 1686887032598,
+		"datosBiometricos": [],
+		"alertas": [
+			"Pie plano",
+			"Fractura de arco postarior en c4"
+		],
+		"historiaClinica": {
+			"problemas": [
+				{
+					"id": 1,
+					"fechaRegistro": 1686887229005,
+					"estaActivo": true,
+					"dxPrevio": "Rectificacion de cadena miofascial posterior",
+					"dxPropio": "Rectificacion de cadena miofascial postarior con subluxaciones vertebrales a nivel toracico",
+					"descripcion": "Paciente presenta dolor en la zona toracica con dificultades para flexionar tronco. se realizan maniobras de evaluacion y se encuentran problemas a nivel de t4 -t8 con subluxacion vertebral y disfuncion en inbrincacion hacia la derecha.",
+					"multimedia": null
+				}
+			],
+			"sesiones": [
+				{
+					"id": 1,
+					"fechaSesion": 1686887498750,
+					"idProblemas": [
+						1
+					],
+					"descripcion": "Se realizaron ajustes osteopaticos buenasos!"
+				}
+			]
+		},
+		"finanzas": {
+			"pagos": [
+				{
+					"pagado": 550,
+					"sesionesCompradas": 10,
+					"fechaPago": 1686887448244
+				}
+			],
+			"sesionesAFavor": 9
+		}
+	}
+]

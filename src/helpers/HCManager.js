@@ -84,7 +84,10 @@ class HCManager {
                 "problemas": [],
                 "sesiones": []
             },
-            finanzas: []
+            finanzas: {
+                pagos: [],
+                sesionesAFavor: 0
+            }
         });
 
         return await fs.promises.writeFile(this.#path, JSON.stringify(currentList, null, '\t'));
@@ -210,34 +213,35 @@ class HCManager {
 const HCmanager = new HCManager('./src/data/HC.json');
 
 // HCmanager.addNewClient({
-//     dni: 123123,
-//     primerNombre: 'Joaquin', 
+//     dni: Number('005433622'),
+//     primerNombre: 'Nicolardo', 
 //     otrosNombre: 'Federico', 
-//     padreApellido: 'Rodriguez', 
-//     madreApellido: 'Vilar', 
+//     padreApellido: 'Ramones', 
+//     madreApellido: 'Villa', 
 //     nacimiento: '1994-01-18'
 // });
 
 
 // HCmanager.addAlertas({
-//     cid: 1, alertas: ["espondilolistesis", "escoliosis", "Fisura en el arco vertebral"]
-// })
+//     cid: 1, alertas: ["Pie plano", "Fractura de arco postarior en c4"]
+// });
 
 // HCmanager.addProblemas({
-//     cid: 1, dxPrevio: 'Fractura de cadera',
-//      dxPropio: 'Fractura de cadera', 
-//      descripcion: 'Paciente con una fractura de cadera que presenta dolor en la zona lumbar que se irradia a la pierna.'
-// })
-
-
-// HCmanager.addSesion({
 //     cid: 1, 
-//     idProblemas: [1, 2], 
-//     descripcion: 'Se realizo magnetoterapia con electroterapia para tratar el dolor y relajar tejidos. Luego se realizaron abordajes de OSteopatia joyas'
-// })
+//     dxPrevio: 'Rectificacion de cadena miofascial posterior',
+//     dxPropio: 'Rectificacion de cadena miofascial postarior con subluxaciones vertebrales a nivel toracico', 
+//     descripcion: 'Paciente presenta dolor en la zona toracica con dificultades para flexionar tronco. se realizan maniobras de evaluacion y se encuentran problemas a nivel de t4 -t8 con subluxacion vertebral y disfuncion en inbrincacion hacia la derecha.'
+// });
+
+
+HCmanager.addSesion({
+    cid: 1, 
+    idProblemas: [1], 
+    descripcion: 'Se realizaron ajustes osteopaticos buenasos!'
+});
 
 // HCmanager.addFinanzas({
 //     cid: 1, 
 //     pagado: 550, 
 //     sesionesCompradas: 10
-// })
+// });
